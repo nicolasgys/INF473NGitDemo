@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SEEnergyConverterAppGUIClass</class>
+ <widget class="QWidget" name="SEEnergyConverterAppGUIClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>536</width>
+    <height>100</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>300</width>
+    <height>100</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string/>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="2">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLineEdit" name="lineEditRight"/>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBoxRight">
+       <item>
+        <property name="text">
+         <string>eV</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Eh</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>kcal/mol</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>zJ</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayoutLeft">
+     <item>
+      <widget class="QLineEdit" name="lineEditLeft"/>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBoxLeft">
+       <item>
+        <property name="text">
+         <string>eV</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Eh</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>kcal/mol</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>zJ</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLabel" name="labelEqualSign">
+     <property name="minimumSize">
+      <size>
+       <width>10</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>=</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>lineEditRight</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>SEEnergyConverterAppGUIClass</receiver>
+   <slot>onRightChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>403</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>267</x>
+     <y>49</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEditLeft</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>SEEnergyConverterAppGUIClass</receiver>
+   <slot>onLeftChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>132</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>267</x>
+     <y>49</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBoxLeft</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>SEEnergyConverterAppGUIClass</receiver>
+   <slot>onLeftChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>132</x>
+     <y>69</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>267</x>
+     <y>49</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBoxRight</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>SEEnergyConverterAppGUIClass</receiver>
+   <slot>onLeftChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>403</x>
+     <y>69</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>267</x>
+     <y>49</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onLeftChanged()</slot>
+  <slot>onRightChanged()</slot>
+ </slots>
+</ui>
